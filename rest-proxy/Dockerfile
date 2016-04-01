@@ -11,6 +11,11 @@ FROM confluent/platform
 ENV CONFLUENT_USER confluent
 ENV CONFLUENT_GROUP confluent
 
+ENV HTTPS_PROXY http://proxy.le-figaro.com:8080
+ENV HTTP_PROXY http://proxy.le-figaro.com:8080
+ENV https_proxy http://proxy.le-figaro.com:8080
+ENV http_proxy http://proxy.le-figaro.com:8080
+
 COPY rest-proxy-docker.sh /usr/local/bin/
 
 RUN groupadd -r ${CONFLUENT_GROUP} &&\

@@ -12,6 +12,11 @@ ENV CONFLUENT_GROUP confluent
 ENV KAFKA_LOGS "/var/log/kafka"
 ENV KAFKA_LOG_DIRS "/var/lib/kafka"
 
+ENV HTTPS_PROXY http://proxy.le-figaro.com:8080
+ENV HTTP_PROXY http://proxy.le-figaro.com:8080
+ENV https_proxy http://proxy.le-figaro.com:8080
+ENV http_proxy http://proxy.le-figaro.com:8080
+
 COPY kafka-docker.sh /usr/local/bin/
 
 RUN groupadd -r ${CONFLUENT_GROUP} &&\

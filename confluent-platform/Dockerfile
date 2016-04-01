@@ -4,6 +4,11 @@
 
 FROM debian:8.2
 
+ENV HTTPS_PROXY http://proxy.le-figaro.com:8080
+ENV HTTP_PROXY http://proxy.le-figaro.com:8080
+ENV https_proxy http://proxy.le-figaro.com:8080
+ENV http_proxy http://proxy.le-figaro.com:8080
+
 ENV SCALA_VERSION="2.11.8"
 ENV JAVA_VERSION="7"
 ENV CONFLUENT_MAJOR_VERSION="2.0.1"

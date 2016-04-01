@@ -6,6 +6,11 @@
 
 FROM confluent/platform
 
+ENV HTTPS_PROXY http://proxy.le-figaro.com:8080
+ENV HTTP_PROXY http://proxy.le-figaro.com:8080
+ENV https_proxy http://proxy.le-figaro.com:8080
+ENV http_proxy http://proxy.le-figaro.com:8080
+
 ENV ZK_DATA_DIR "/var/lib/zookeeper"
 ENV CONFLUENT_USER confluent
 ENV CONFLUENT_GROUP confluent

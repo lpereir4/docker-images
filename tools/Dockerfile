@@ -8,6 +8,11 @@
 
 FROM confluent/platform
 
+ENV HTTPS_PROXY http://proxy.le-figaro.com:8080
+ENV HTTP_PROXY http://proxy.le-figaro.com:8080
+ENV https_proxy http://proxy.le-figaro.com:8080
+ENV http_proxy http://proxy.le-figaro.com:8080
+
 COPY confluent-tools.sh /
 ENTRYPOINT ["/confluent-tools.sh"]
 CMD ["kafka-avro-console-consumer"]
